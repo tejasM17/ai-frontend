@@ -15,7 +15,7 @@ const ImageAI = () => {
     try {
       const res = await axios.post('http://localhost:5000/ai/imgai', { prompt });
       setImageSrc(res.data.image); // Base64 string
-    } catch (err) {
+    } catch {
       setError('Failed to generate image. Check backend.');
     } finally {
       setLoading(false);
